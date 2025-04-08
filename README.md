@@ -13,5 +13,11 @@ A mini Quora-style web app where users can:
 ```bash
 git clone <your-repo-url>
 cd my_quora
+
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+pip install -r requirements.txt
+
 python manage.py migrate
 python manage.py runserver
