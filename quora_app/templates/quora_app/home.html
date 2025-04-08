@@ -1,0 +1,13 @@
+{% extends 'quora_app/base.html' %}
+{% block content %}
+<h2>All Questions</h2>
+{% for question in questions %}
+    <div>
+        <p><strong>{{ question.user.username }}</strong>: {{ question.text }}</p>
+        <a href="{% url 'question_detail' question.id %}">View / Answer</a>
+    </div>
+    <hr>
+{% empty %}
+    <p>No questions yet.</p>
+{% endfor %}
+{% endblock %}
